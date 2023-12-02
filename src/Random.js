@@ -1,4 +1,4 @@
-class Random {
+export class Random {
     constructor({ $target, onClick }) {
         this.$random = document.createElement("button");;
         this.$random.type = "button"

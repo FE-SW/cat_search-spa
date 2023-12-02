@@ -1,6 +1,6 @@
 const TEMPLATE = '<input type="text">';
 
-class SearchInput {
+export class SearchInput {
   constructor({ $target, onSearch }) {
     this.$searchInput = document.createElement("input");;
     this.$searchInput.placeholder = "고양이를 검색해보세요.|";

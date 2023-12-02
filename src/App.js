@@ -1,6 +1,14 @@
+import { SearchInput } from './SearchInput.js';
+import { RecentSearch } from './RecentSearch.js';
+import { SearchResult } from './SearchResult.js';
+import { ImageInfo } from './ImageInfo.js';
+import { Toggle } from './Toggle.js';
+import { Random } from './Random.js';
+import * as api from './api.js';
+
 console.log("app is running!");
 
-class App {
+export class App {
   $target = null;
   data = [];
   loading = false;

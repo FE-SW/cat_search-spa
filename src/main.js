@@ -1,1 +1,5 @@
-new App(document.querySelector("#App"));
+import { App } from './App.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    new App(document.getElementById('App'));
+});

@@ -1,6 +1,6 @@
 const API_ENDPOINT = "https://q9d70f82kd.execute-api.ap-northeast-2.amazonaws.com/dev";
 
-const api = {
+export const api = {
   fetchCats: async keyword => {
     try {
       const response = await fetch(`${API_ENDPOINT}/api/cats/search?q=${keyword}`);

@@ -1,4 +1,4 @@
-class RecentSearch {
+export class RecentSearch {
     data = [];
     onClick = null;
     constructor({ $target, onClick }) {
