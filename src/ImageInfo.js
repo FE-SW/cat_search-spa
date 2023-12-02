@@ -22,17 +22,20 @@ class ImageInfo {
         const { name, url, temperament, origin } = this.data.image;
   
         this.$imageInfo.innerHTML = `
-          <div class="content-wrapper">
-            <div class="title">
-              <span>${name}</span>
-              <div class="close">x</div>
-            </div>
-            <img src="${url}" alt="${name}"/>        
-            <div class="description">
-              <div>성격: ${temperament}</div>
-              <div>태생: ${origin}</div>
-            </div>
-          </div>`;
+        <article class="content-wrapper">
+          <header class="title">
+            <h2>${name}</h2>
+            <button class="close">x</button>
+          </header>
+          <figure>
+            <img src="${url}" alt="${name}" />
+            <figcaption class="description">
+              <p>성격: ${temperament}</p>
+              <p>태생: ${origin}</p>
+            </figcaption>
+          </figure>
+        </article>
+    `;
         this.$imageInfo.style.display = "block";
   
         // display를 변경하고 바로 클래스를 추가/제거하면 transition 효과가 제대로 작동하지 않을 수 있음

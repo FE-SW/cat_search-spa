@@ -25,16 +25,13 @@ class RecentSearch {
     render() {
         if (this.data.length > 0) {
             this.$recentSearch.innerHTML = `
-            <div class="recentSearch-container">
-              ${this.data
-                    .map(
-                        d => `
-                    <div class="recentSearch-box" key=${d}>
-                      ${d}
-                    </div>
-                  `
-                    )}
-            </div>
+            <section class="recentSearch-container">
+                <ul>
+                    ${this.data.map(d => `<li class="recentSearch-box" key=${d}>${d}
+                </li>
+                `)}
+            </ul>
+            </section>
           `;
 
             this.$recentSearch.querySelectorAll(".recentSearch-box").forEach(($item, index) => {

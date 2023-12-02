@@ -57,24 +57,22 @@ class SearchResult {
   
     render() {
       if (this.absense) {
-        this.$searchResult.innerHTML = `<div class="loading">검색결과가 존재하지 않습니다</div>`
+        this.$searchResult.innerHTML = `<p class="loading">검색결과가 존재하지 않습니다</p>`
       }
       else if (this.loading) {
-        this.$searchResult.innerHTML = `<div class="loading">Loading...</div>`
+        this.$searchResult.innerHTML = `<p class="loading">Loading...</p>`
       } else {
         this.$searchResult.innerHTML = `
-          <div class="grid-container">
-            ${this.data
-            .map(
-              cat => `
-                  <div class="item">
-                    <img data-src="${cat.url}" alt="${cat.name}" loading="lazy"/>
-                    <span>${cat.name}</span>
-                  </div>
-                `
-            )
-            .join("")}
-          </div>
+            <section class="grid-container">
+                ${this.data
+                .map(cat => `
+                    <article class="item">
+                        <img data-src="${cat.url}" alt="${cat.name}" loading="lazy"/>
+                        <h3>${cat.name}</h3>
+                    </article>
+                `)
+                .join("")}
+            </section>
         `;
   
         this.$searchResult.querySelectorAll(".item").forEach(($item, index) => {
